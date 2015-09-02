@@ -81,9 +81,9 @@ def get_tag_values(filename):
 
     # now we have dag properties, create one with materials and one with tallies
     for tag in dag_properties:
-        if 'mat:' in tag:
-            dag_material_tags.append(tag)
         if 'mat:' in tag or 'graveyard' in tag.lower():
+            dag_material_tags.append(tag)
+        if 'tally:' in tag:
             dag_tally_tags.append(tag)
 
     return dag_material_tags,tally_assigns
