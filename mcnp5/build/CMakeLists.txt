@@ -351,7 +351,6 @@ LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/sing.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/smmp.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/smpsrc.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/sourcb.F90)
-LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/source.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/sourck.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/spec.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/spol.F90)
@@ -418,6 +417,11 @@ LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/xsec.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/xsgen.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/ypbssp.F90)
 LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/zaid.F90)
+
+LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/source.F90)
+LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/source_sampling.cpp)
+LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/measure.cpp)
+
 
 # cpp files go here
 # LIST(APPEND MCNP_SRC_FILES ${MCNP_SRC}/Source/src/plasma_source.cpp)
