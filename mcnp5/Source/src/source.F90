@@ -36,12 +36,6 @@ function find_cell() result(icl_tmp)
     enddo
     ! icl is now set
 
-    if(icl_tmp .le. 0) then
-      write(*,*) 'Nonsense cell number stopping'
-      stop
-    endif
-    ! icl now set to be valid cell
-
 end function find_cell
 
 subroutine source
@@ -72,7 +66,13 @@ subroutine source
    rands(5) = rang() ! sample z
  
    call particle_birth(rands, xxx, yyy, zzz, erg, wgt)
+
    icl_tmp = find_cell()
+   ! If we are not in a valid cell, resample the source particle
+   if(icl_tmp .le. 0) then
+       goto 100
+   endif
+
    if (mat(icl_tmp).eq.0 .and. tries < idum(2)) then
        tries = tries + 1
        goto 200
